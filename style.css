@@ -9,5 +9,89 @@
 .wrapper{
     width: 100vw;
     height: 100vh;
-    
+    /* background-image: url(frantisek-g-XXuVXLy5gHU-unsplash.jpg); */
+    display: grid;
+    place-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.game-info{
+    color: white;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 1rem;
+    border: 1px solid rgb(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    text-align: center;
+
+}
+
+.btn{
+    position: absolute;
+    bottom:3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 1rem;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    display: none;
+
+}
+.btn:hover{
+    background-color: rgba(174, 173, 173, 0.5);
+    padding: 0.55rem 2.1rem;
+    transition-duration:0.1s ;
+    font-size: 1.1rem;
+}
+.btn .active{
+    display: flex;
+}
+
+.tic-tac-toe{
+    position: absolute;
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 1rem;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 1/1;
+}
+
+.box{
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    aspect-ratio: 1/1;font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.box1 ,.box2 , .box4,.box5{
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+
+}
+.box3 , .box6{
+    border-bottom: 2px solid white;
+}
+
+.box7, .box8{
+    border-right: 2px solid white;
+}
+
+.win{
+    position: relative;
+    background-color: rgb(0, 255, 0,0.3);
 }
